@@ -23,9 +23,5 @@ function cuerpo()
 ?>
     <br><br>
     Hola, estás en Index.php
-    <br>
-    <button ><a href="./practica1/ejercicio1.php">Ejercicio1</a></button>
-    <?php
-    ?>
 <?php
 }
