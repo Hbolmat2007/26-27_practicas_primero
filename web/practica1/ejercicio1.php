@@ -64,10 +64,7 @@ function inicioCuerpo($cabecera)
                 
             </div>
             <div id="barraMenu">
-                <ul>
-                    <li><a href="/index.php">Inicio</a></li>
-                 </ul> 
-                
+                    <button class="boton"><a href="/index.php">Inicio</a></button>
             </div>
             
             <div>
@@ -83,7 +80,7 @@ function finCuerpo()
             <footer>
                 <hr width="90%"  />  
                 <div>
-                    &copy; Copyright  by Profesor
+                    &copy; Copyright by Ayuntamiento de Zúñiga
                 </div>
             </footer>
         </div>
@@ -96,15 +93,32 @@ function finCuerpo()
 
 // your functions above...
 
-inicioCabecera("PRACTICA");
+inicioCabecera("Ejercicio 1");
 finCabecera();
 
-inicioCuerpo("Mi página");
+inicioCuerpo("Ejercicio 1");
 
 $variable1 = 0.5;
 $variable2 = 0.4;
 $variable3 = -5;
-echo "ABS: ", abs($variable3);
+$variable4 = 20;
+$variable5 = 3;
+
+echo "Valor absoluto de ", $variable3, ": ", abs($variable3);
 echo "<br>";
-echo "Round: ", round($variable3);
+echo "Redondeo de ", $variable2, ": ", round($variable2);
+echo "<br>";
+echo "Redondeo de ", $variable1, ": ", round($variable1);
+echo "<br>";
+echo $variable4, " elevado a ", $variable5, ": ", pow($variable4, $variable5);
+echo "<br>";
+echo "Raíz cuadrada de ", $variable4, ": ", sqrt($variable4);
+echo "<br>";
+echo "Hexadecimal de 50589: ", dechex(50589);
+echo "<br>";
+echo "123123 (base 4) a base 8: ", base_convert(123123, 4, 8);
+echo "<br>";
+echo "Redondeo de ", $variable1, " hacia abajo: ", floor($variable1);
+echo "<br>";
+echo "Redondeo de ", $variable2, " hacia arriba: ", ceil($variable2);
 finCuerpo();

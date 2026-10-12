@@ -5,10 +5,10 @@ include_once(dirname(__FILE__) . "/cabecera.php");
 $usuario=getenv("MYSQL_USER");
 
 //dibuja la plantilla de la vista
-inicioCabecera("APLICACION PRIMER TRIMESTRE");
+inicioCabecera("Primera práctica");
 cabecera();
 finCabecera();
-inicioCuerpo("2DAW APLICACION");
+inicioCuerpo("Práctica 1");
 cuerpo();  //llamo a la vista
 finCuerpo();
 // **********************************************************
@@ -21,10 +21,8 @@ function cabecera()
 function cuerpo()
 {
 ?>
-    <br><br>
-    Hola, estás en Index.php
     <br>
-    <button ><a href="./practica1/ejercicio1.php">Ejercicio1</a></button>
+    <button class="boton"><a href="./practica1/ejercicio1.php">Ejercicio1</a></button>
     <?php
     ?>
 <?php

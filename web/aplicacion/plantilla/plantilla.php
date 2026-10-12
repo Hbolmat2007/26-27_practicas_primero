@@ -57,7 +57,10 @@ function inicioCuerpo($cabecera)
         <div id="documento">
         
             <header>
-                <h1 id="titulo"><?php echo $cabecera;?></h1>
+                <center>
+                    <h1 id="titulo"><?php echo $cabecera;?></h1>
+                </center>
+                
             </header>
             
             <div id="barraLogin">
@@ -77,13 +80,11 @@ function inicioCuerpo($cabecera)
 function finCuerpo()
 {
 ?>
-                <br />
-                <br />
             </div>
             <footer>
                 <hr width="90%"  />  
                 <div>
-                    &copy; Copyright  by Profesor
+                    &copy; Copyright  by Ayuntamiento de Zúñiga
                 </div>
             </footer>
         </div>
