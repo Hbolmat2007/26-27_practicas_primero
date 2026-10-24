@@ -21,7 +21,7 @@ function inicioCabecera($titulo)
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
 
         <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
         Remove this if you use the .htaccess -->
@@ -37,7 +37,7 @@ function inicioCabecera($titulo)
         <link rel="shortcut icon" href="/favicon.ico">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         
-        <link rel="stylesheet" type="text/css" href="/estilos/base.css">
+        <link rel="stylesheet" type="text/css" href="../../estilos/base.css">
 <?php
 }
 
@@ -56,7 +56,8 @@ function inicioCuerpo($cabecera)
     <body>
         <div id="documento">
         
-            <header>
+            <header id="cabecera">
+                <a href="../../index.php"><img id="logo" src="../../imagenes/logo.png" alt=""></a> 
                 <h1 id="titulo"><?php echo $cabecera;?></h1>
             </header>
             
@@ -64,12 +65,8 @@ function inicioCuerpo($cabecera)
                 
             </div>
             <div id="barraMenu">
-                <ul>
-                    <li><a href="/index.php">Inicio</a></li>
-                 </ul> 
-                
             </div>
-            
+
             <div>
 <?php   
 }
@@ -83,7 +80,7 @@ function finCuerpo()
             <footer>
                 <hr width="90%"  />  
                 <div>
-                    &copy; Copyright  by Profesor
+                    &copy; Copyright  by Asociación de Vecinos de Estación de Salinas
                 </div>
             </footer>
         </div>
@@ -91,3 +88,16 @@ function finCuerpo()
 </html>
 <?php
 }
+
+function mostrarBarra($barra)
+{
+    foreach ($barra as $item) {
+        $enlace = isset($item["ENLACE"]) ? "href='" . $item["ENLACE"] . "'" : "";
+        $texto = $item["TEXTO"] ?? "";
+        $adicional = $item["ADICIONAL"] ?? "";
+
+        echo !empty($enlace) ? "<a class='boton' {$enlace}>{$texto} {$adicional}</a>" :
+            "<p>{$texto} {$adicional}</p>";
+    }
+}
+
