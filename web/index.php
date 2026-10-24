@@ -4,12 +4,17 @@ include_once(dirname(__FILE__) . "/cabecera.php");
 
 $usuario=getenv("MYSQL_USER");
 
+$barra = [
+    ["TEXTO" => "Practica 2", "ENLACE" => "./aplicacion/practica2/index.php"],
+    ["TEXTO" => "Practica 3", "ENLACE" => "./aplicacion/practica3/index.php"],
+];
+
 //dibuja la plantilla de la vista
-inicioCabecera("APLICACION PRIMER TRIMESTRE");
+inicioCabecera("Aplicación de Hugo Bolaños");
 cabecera();
 finCabecera();
 inicioCuerpo("2DAW APLICACION");
-cuerpo();  //llamo a la vista
+cuerpo($barra);  
 finCuerpo();
 // **********************************************************
 
@@ -18,10 +23,11 @@ function cabecera()
 {}
 
 //vista
-function cuerpo()
+function cuerpo($barra)
 {
+    
+    mostrarBarra($barra);
+
 ?>
-    <br><br>
-    Hola, estás en Index.php
 <?php
 }
