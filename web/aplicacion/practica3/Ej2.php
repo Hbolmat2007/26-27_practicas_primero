@@ -12,8 +12,8 @@ inicioCabecera("Ejercicio 2");
 cabecera();
 finCabecera();
 
-inicioCuerpo("TITULO DE LA PAGINA");
-cuerpo(/* pasar aquí los datos necesarios */);
+inicioCuerpo("Ejercicio 2");
+cuerpo($cadena0, $cadena10, $cadena50);
 finCuerpo();
 
 // Vista
@@ -21,9 +21,14 @@ function cabecera()
 {
 }
 
-function cuerpo(/* parámetros necesarios */)
+function cuerpo($cadena0, $cadena10, $cadena50)
 {
 ?>
-    <!-- HTML del ejercicio -->
+
 <?php
+    echo "<p>Cadena de 0 carácteres: $cadena0</p>";
+    echo "<br>";
+    echo "<p>Cadena de 10 carácteres: $cadena10</p>";
+    echo "<br>";
+    echo "<p>Cadena de 50 carácteres: " . $cadena50 . "</p>";
 }
