@@ -17,3 +17,36 @@ function generarCadena(int $longitud = 10) {
     }
     return $resultado;
 }
+
+function operaciones(int $operacion, int ... $numeros) {
+    if (count($numeros) < 2) {
+        return false;
+    }
+    if ($operacion === 1) {
+        return array_sum($numeros);
+    }
+    else if ($operacion === 2) {
+        $resultado = $numeros[0];
+        for ($cont = 1; $cont < count($numeros); $cont++) {
+            $resultado = $resultado - $numeros[$cont];
+        }
+        return $resultado;
+    } else if ($operacion === 3) {
+        $resultado = 1;
+        for ($cont = 0; $cont < count($numeros); $cont++) {
+            $resultado = $resultado * $numeros[$cont];
+        }
+        return $resultado;
+    } else {
+        $resultado = 0;
+        for ($cont = 0; $cont < count($numeros); $cont++) {
+            if (($cont + 1)%2 == 1) {
+                $resultado = $resultado - $numeros[$cont];
+            } else {
+                $resultado = $resultado + $numeros[$cont];
+            }
+            
+        }
+        return $resultado;
+    }
+}
