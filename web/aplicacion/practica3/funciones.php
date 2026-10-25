@@ -50,3 +50,9 @@ function operaciones(int $operacion, int ... $numeros) {
         return $resultado;
     }
 }
+
+function devuelve(int &$valor1, int $valor2 = 10, int $valor3 = 20) {
+    $resultado = $valor1 * $valor2 * $valor3;
+    $valor1 = $valor1 + $valor2 + $valor3;
+    return $resultado;
+}
