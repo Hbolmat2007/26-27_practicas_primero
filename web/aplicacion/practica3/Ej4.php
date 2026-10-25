@@ -7,11 +7,11 @@ $valor1 = 5;
 $valor1original = $valor1;
 $resultado = devuelve($valor1, 15);
 // Dibuja la vista
-inicioCabecera("TITULO DEL EJERCICIO");
+inicioCabecera("Ejercicio 4");
 cabecera();
 finCabecera();
 
-inicioCuerpo("TITULO DE LA PAGINA");
+inicioCuerpo("Ejercicio 4");
 cuerpo($valor1, $valor1original, $resultado);
 finCuerpo();
 
