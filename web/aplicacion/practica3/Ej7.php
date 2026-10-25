@@ -3,17 +3,17 @@ include_once(dirname(__FILE__) . "/../../cabecera.php");
 include_once(dirname(__FILE__) . "/funciones.php");
 
 // Controlador
-// 1. Recoger los datos necesarios.
-// 2. Validarlos y procesarlos.
-// 3. Preparar los datos para la vista.
+$array = ["Alfarnate", "Periana", "Estación de Salinas", "Archidona", "Zafarraya", "Tapia"];
+ordenar($array);
+$arraySinOrdenar = ["Alfarnate", "Periana", "Estación de Salinas", "Archidona", "Zafarraya", "Tapia"];
 
 // Dibuja la vista
-inicioCabecera("TITULO DEL EJERCICIO");
+inicioCabecera("Ejercicio 7");
 cabecera();
 finCabecera();
 
-inicioCuerpo("TITULO DE LA PAGINA");
-cuerpo(/* pasar aquí los datos necesarios */);
+inicioCuerpo("Ejercicio 7");
+cuerpo($array, $arraySinOrdenar);
 finCuerpo();
 
 // Vista
@@ -21,9 +21,10 @@ function cabecera()
 {
 }
 
-function cuerpo(/* parámetros necesarios */)
+function cuerpo($array, $arraySinOrdenar)
 {
 ?>
-    <!-- HTML del ejercicio -->
+    <p>Array sin ordenar: <?php echo print_r($arraySinOrdenar); ?></p>
+    <p>Array Ordenado: <?php echo print_r($array); ?></p>
 <?php
 }

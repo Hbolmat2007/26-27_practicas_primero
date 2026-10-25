@@ -14,11 +14,11 @@ $resOperacion3 = operaciones(3, $array_numeros[0], $array_numeros[1], $array_num
 $resOperacion4 = operaciones(4, $array_numeros[0], $array_numeros[1], $array_numeros[2], $array_numeros[3]);
 
 // Dibuja la vista
-inicioCabecera("TITULO DEL EJERCICIO");
+inicioCabecera("Ejercicio 3");
 cabecera();
 finCabecera();
 
-inicioCuerpo("TITULO DE LA PAGINA");
+inicioCuerpo("Ejercicio 3");
 cuerpo($array_numeros, $resOperacion1, $resOperacion2, $resOperacion3, $resOperacion4);
 finCuerpo();
 

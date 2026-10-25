@@ -3,15 +3,15 @@ include_once(dirname(__FILE__) . "/../../cabecera.php");
 include_once(dirname(__FILE__) . "/funciones.php");
 
 // Controlador
-$resultado1 = llamadaAFuncion(2,2, fn($valor1, $valor2) => $valor1 * $valor2);
-$resultado2 = llamadaAFuncion(2,2, fn($valor1, $valor2) => $valor1 - $valor2);
-$resultado3 = llamadaAFuncion(2,2, fn($valor1, $valor2) => $valor1 + $valor2);
+$resultado1 = llamadaAFuncion(5,4, fn($valor1, $valor2) => $valor1 * $valor2);
+$resultado2 = llamadaAFuncion(2,23, fn($valor1, $valor2) => $valor1 - $valor2);
+$resultado3 = llamadaAFuncion(7,6, fn($valor1, $valor2) => $valor1 + $valor2);
 // Dibuja la vista
-inicioCabecera("TITULO DEL EJERCICIO");
+inicioCabecera("Ejercicio 6");
 cabecera();
 finCabecera();
 
-inicioCuerpo("TITULO DE LA PAGINA");
+inicioCuerpo("Ejercicio 6");
 cuerpo($resultado1, $resultado2, $resultado3);
 finCuerpo();
 

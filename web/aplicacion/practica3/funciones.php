@@ -80,3 +80,16 @@ function hacerOperacion (string $operacion, int $valor1, int $valor2) {
 function llamadaAFuncion(int $valor1, int $valor2, callable $callback): int {
     return $callback($valor1, $valor2);
 }
+
+function ordenar(array &$array) {
+    $callback = function($valor1, $valor2) {
+        if (strlen($valor1) === strlen($valor2)) {
+            return 0;
+        } else if (strlen($valor1) < strlen($valor2)) {
+            return 1;
+        } else {
+            return -1;
+        }
+    };
+    usort($array, $callback);
+}
