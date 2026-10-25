@@ -76,3 +76,7 @@ function hacerOperacion (string $operacion, int $valor1, int $valor2) {
         return $operacion($valor1, $valor2);
     }
 }
+
+function llamadaAFuncion(int $valor1, int $valor2, callable $callback): int {
+    return $callback($valor1, $valor2);
+}
