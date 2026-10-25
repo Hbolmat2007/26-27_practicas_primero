@@ -3,17 +3,19 @@ include_once(dirname(__FILE__) . "/../../cabecera.php");
 include_once(dirname(__FILE__) . "/funciones.php");
 
 // Controlador
-// 1. Recoger los datos necesarios.
-// 2. Validarlos y procesarlos.
-// 3. Preparar los datos para la vista.
+$valor1 = 5;
+$valor2 = 6;
+$mult = hacerOperacion("multiplicar",$valor1,$valor2);
+$suma = hacerOperacion("sumar",$valor1,$valor2);
+$resta = hacerOperacion("restar",$valor1,$valor2);
 
 // Dibuja la vista
-inicioCabecera("TITULO DEL EJERCICIO");
+inicioCabecera("Ejercicio 5");
 cabecera();
 finCabecera();
 
-inicioCuerpo("TITULO DE LA PAGINA");
-cuerpo(/* pasar aquí los datos necesarios */);
+inicioCuerpo("Ejercicio 5");
+cuerpo($mult, $resta, $suma);
 finCuerpo();
 
 // Vista
@@ -21,9 +23,11 @@ function cabecera()
 {
 }
 
-function cuerpo(/* parámetros necesarios */)
+function cuerpo($mult, $resta, $suma)
 {
 ?>
-    <!-- HTML del ejercicio -->
+    <p>Resultado de la operación de Multiplicación: <?php echo $mult; ?></p>
+    <p>Resultado de la operación de Resta: <?php echo $resta; ?></p>
+    <p>Resultado de la operación de Suma: <?php echo $suma; ?></p>
 <?php
 }

@@ -56,3 +56,23 @@ function devuelve(int &$valor1, int $valor2 = 10, int $valor3 = 20) {
     $valor1 = $valor1 + $valor2 + $valor3;
     return $resultado;
 }
+
+function sumar (int $valor1, int $valor2): int {
+    return $valor1 + $valor2;
+}
+
+function restar (int $valor1, int $valor2): int {
+    return $valor1 - $valor2;
+}
+function multiplicar (int $valor1, int $valor2): int {
+    return $valor1 * $valor2;
+}
+
+function hacerOperacion (string $operacion, int $valor1, int $valor2) {
+    if ($operacion !== "sumar" && $operacion !== "restar" && $operacion !== "multiplicar") {
+        return false;
+    }
+    else {
+        return $operacion($valor1, $valor2);
+    }
+}
