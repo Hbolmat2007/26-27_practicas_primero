@@ -8,7 +8,14 @@ class instrumentoBase {
         $this->edad = $edad;
     }
 
-    public function setDescripcion(string $descripcion) {$this->descripcion = $descripcion;}
-    public function getDescripcion () { return $this->descripcion; }
+    public function setDescripcion(string $descripcion) : void {$this->descripcion = $descripcion;}
+    public function getDescripcion () : string { return $this->descripcion; }
+
+    public function setEdad(int $edad) : void {$this->edad = $edad;}
+    public function getEdad () : int{ return $this->edad; }
+
+    public function envejecer() : void {
+        $this->edad = $this->edad + 1;
+    }
 
 } 
