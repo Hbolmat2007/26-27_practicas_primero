@@ -68,6 +68,7 @@ function inicioCuerpo($cabecera)
             </div>
 
             <div>
+            <?php mostrarUbicacion();?>
 <?php   
 }
 
@@ -101,3 +102,22 @@ function mostrarBarra($barra)
     }
 }
 
+function mostrarUbicacion()
+{
+    $script  = $_SERVER["SCRIPT_NAME"];
+    $carpeta = trim(dirname($script), "/\\.");
+    $fichero = basename($script, ".php");
+
+    echo "<nav id='barraUbicacion'>";
+    echo "Estás en: <a href='/index.php'>Inicio</a>";
+
+    if ($carpeta !== "") {
+        echo " &rsaquo; <a href='/$carpeta/index.php'>" . ucfirst($carpeta) . "</a>";
+    }
+
+    if ($fichero !== "index") {
+        echo " &rsaquo; <span class='actual'>$fichero</span>";
+    }
+
+    echo "</nav>\n";
+}
