@@ -1,15 +1,19 @@
 <?php
 //Se declara la clase instrumentoBase
 abstract class instrumentoBase {
-    protected static int $contador;
+
+    protected static int $contador = 1;
     // Se declaran las variables de instancia
     private string $descripcion;
     private int $edad;
+    private int $orden;
 
     // Se declara el constructor
     public function __construct(string $descripcion, int $edad = 10) {
         $this->descripcion = $descripcion;
         $this->edad = $edad;
+        $this->orden = self::$contador;
+        self::$contador++;
     }
 
     // Get y Set de Descripcion
@@ -19,6 +23,9 @@ abstract class instrumentoBase {
     // Get y Set de la Edad
     public function setEdad(int $edad) : void {$this->edad = $edad;}
     public function getEdad () : int{ return $this->edad; }
+
+    // Get del orden (Supoiendo que no se modifica)
+    public function getOrden() : int { return $this->orden; }
 
     // Función de envejecer
     public function envejecer() : void {
@@ -30,4 +37,7 @@ abstract class instrumentoBase {
     public abstract function sonido() : string;
     public abstract function afinar() : string;
 
-} 
+    public function __toString() : string {
+        return "Instrumento con descripción " . $this->descripcion . ", instancia " . $this->orden . " de un total de " . self::$contador . ". Tiene " . $this->edad . " años. La clase es " . get_class($this);
+    }
+}
