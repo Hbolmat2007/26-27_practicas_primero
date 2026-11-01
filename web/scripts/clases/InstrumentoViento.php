@@ -6,7 +6,7 @@ class InstrumentoViento extends instrumentoBase {
 
     // Constructor con edad por defecto de 15
     //#[\Override]
-    public function __construct(string $material, int $edad = 15)
+    public function __construct(string $material = "madera", int $edad = 15)
     {
         parent::__construct("Instrumento de viento", $edad);
         $this->material = $material;
