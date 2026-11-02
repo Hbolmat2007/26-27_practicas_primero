@@ -8,7 +8,8 @@ $barra = [
     ["TEXTO" => "Ejercicio 1", "ENLACE" => "./Ej1.php"],
     ["TEXTO" => "Ejercicio 3", "ENLACE" => "./Ej3.php"],
     ["TEXTO" => "Ejercicio 4", "ENLACE" => "./Ej4.php"],
-    ["TEXTO" => "Ejercicio 5", "ENLACE" => "./Ej5.php"]
+    ["TEXTO" => "Ejercicio 5", "ENLACE" => "./Ej5.php"],
+    ["TEXTO" => "Ejercicio 6", "ENLACE" => "./Ej6.php"]
     
 ];
 
