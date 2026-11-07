@@ -7,7 +7,8 @@ $usuario=getenv("MYSQL_USER");
 $barra = [
     ["TEXTO" => "Practica 2", "ENLACE" => "./aplicacion/practica2/index.php"],
     ["TEXTO" => "Practica 3", "ENLACE" => "./aplicacion/practica3/index.php"],
-    ["TEXTO" => "Practica 4", "ENLACE" => "./aplicacion/practica4/index.php"]
+    ["TEXTO" => "Practica 4", "ENLACE" => "./aplicacion/practica4/index.php"],
+    ["TEXTO" => "Practica 5", "ENLACE" => "./aplicacion/practica5/index.php"]
 ];
 
 //dibuja la plantilla de la vista
@@ -24,7 +25,7 @@ function cabecera()
 {}
 
 //vista
-function cuerpo($barra)
+function cuerpo(array $barra)
 {
     
     mostrarBarra($barra);
