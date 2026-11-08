@@ -41,7 +41,7 @@ function validaFecha(string &$var, string $defecto, bool $siglo1 = false):bool {
     // Podría ser incorrecto si se está trabajando con una fecha anterior al siglo II
     // Por eso añadí un parámetro extra opcional, para que se especifique si se está trabajando con una fecha del 1er siglo DC
     if (!$siglo1) {
-        if (mb_strlen($fecha[2]) == 2) { $fecha[2] = "20" . $fecha[0]; }
+        if (mb_strlen($fecha[2]) == 2) { $fecha[2] = "20" . $fecha[2]; }
     }
     
     $var = $fecha[0] . "/" . $fecha[1] . "/" . $fecha[2];  
