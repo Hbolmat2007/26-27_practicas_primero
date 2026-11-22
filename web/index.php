@@ -5,10 +5,12 @@ include_once(dirname(__FILE__) . "/cabecera.php");
 $usuario=getenv("MYSQL_USER");
 
 $barra = [
+    ["TEXTO" => "Info", "ENLACE" => "./aplicacion/info.php"],
     ["TEXTO" => "Practica 2", "ENLACE" => "./aplicacion/practica2/index.php"],
     ["TEXTO" => "Practica 3", "ENLACE" => "./aplicacion/practica3/index.php"],
     ["TEXTO" => "Practica 4", "ENLACE" => "./aplicacion/practica4/index.php"],
-    ["TEXTO" => "Practica 5", "ENLACE" => "./aplicacion/practica5/index.php"]
+    ["TEXTO" => "Practica 5", "ENLACE" => "./aplicacion/practica5/index.php"],
+    ["TEXTO" => "Practica 7", "ENLACE" => "./aplicacion/practica7/index.php"]
 ];
 
 //dibuja la plantilla de la vista

@@ -185,3 +185,20 @@ footer {
     font-weight: bold;
     color: #2e8b57;
 }
+
+select {
+    border: thin solid #2a6fb0;
+    background-color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 4px;
+    color: #333333;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 0.9em;
+}
+
+select:focus {
+    background-color: #fffde0;
+    outline: none;
+    border-color: #2e8b57;
+}

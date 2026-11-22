@@ -6,7 +6,7 @@ function validaEntero(int &$var, int $min, int $max, int $defecto):bool {
     $booleano = (($var >= $min) && ($var <= $max));
     // Si no está en los límites, se sustituye por el valor por defecto
     if (!$booleano) { $var = $defecto; }
-    // Devuelve true si el valor está en sus límites o false si no lo está
+    // Devuelve true si eVALIDAl valor está en sus límites o false si no lo está
     return $booleano;
 }
 
